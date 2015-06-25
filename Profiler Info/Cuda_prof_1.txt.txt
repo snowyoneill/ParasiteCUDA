@@ -1,0 +1,18 @@
+#RUN 1
+timestamp
+method
+gputime
+cputime
+gridSize
+blockSize
+dynSmemPerBlock	
+staSmemPerBlock
+registerPerThread
+occupancy
+streamID
+local_load
+local_store
+divergent_branch
+branch
+memTransferSize
+memTransferDir

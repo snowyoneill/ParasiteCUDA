@@ -1,0 +1,4 @@
+set cuda_profile=1
+set cuda_profile_csv=1
+set cuda_profile_config=./profiler/cuda_profile_config.txt
+set cuda_profile_log=./profiler/run_5.log

@@ -1,0 +1,76 @@
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile=1
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile_config=./cuda_profile_config.txt
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile_csv=1
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile_log=./cuda_test.log
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>ParasiteCUDA.exe "C:\Documents and Settings\15516059\Deskt
+op\CUDA Final Stage Extra\CUDA Final Stage Extra\ParasiteCUDA\images" vid1
+--------
+imagePath: C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUD
+A Final Stage Extra\ParasiteCUDA\images
+////////////////////////////////////////
+/       CUDA PARASITE ANALYSIS         /
+////////////////////////////////////////
+Starting program...
+
+Image Path: C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CU
+DA Final Stage Extra\ParasiteCUDA\images
+#Input Images: 140
+___________________
+
+Total Run Time: 10.425923(s)
+
+--------------- Flux Unsorted ---------------
+Results appended to file.
+___________________
+PROGRAM COMPLETED
+
+PRESS ANY KEY TO EXIT
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile=1
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile_config=./cuda_profile_config.txt
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile_log=./cuda_test1.log
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>set cuda_profile_csv=1
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>ParasiteCUDA.exe "C:\Documents and Settings\15516059\Deskt
+op\CUDA Final Stage Extra\CUDA Final Stage Extra\ParasiteCUDA\images" vid1
+--------
+imagePath: C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUD
+A Final Stage Extra\ParasiteCUDA\images
+////////////////////////////////////////
+/       CUDA PARASITE ANALYSIS         /
+////////////////////////////////////////
+Starting program...
+
+Image Path: C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CU
+DA Final Stage Extra\ParasiteCUDA\images
+#Input Images: 140
+___________________
+
+Total Run Time: 10.416465(s)
+
+--------------- Flux Unsorted ---------------
+Results appended to file.
+___________________
+PROGRAM COMPLETED
+
+PRESS ANY KEY TO EXIT
+
+C:\Documents and Settings\15516059\Desktop\CUDA Final Stage Extra\CUDA Final Sta
+ge Extra\ParasiteCUDA>

@@ -1,0 +1,42 @@
+Major Revision:
+
+helperMethods.cpp - added a function called 'outputCSV' which takes as input an image array and calculates the total number of gray levels for the entire image.
+                  - it then writes the output to a comma-separated value file which can in turn be used to create histograms in excel.
+
+imageio.cpp - refactored some function names to make them more descriptive.
+              - added a line of code to the original 'createImage' to ensure the moy levels were recorded.
+              - attempted to make a 'libbmp_initialise' function to initialise an image without adding data - currently not in use.
+
+sizeFindingMethods.cpp - added some comments.
+
+postProcessing.cu - removed old redundant code
+                  - added CUDA functions 'erodeImageCUDA' to erode a segmented image, 
+                  - 'dilateImageCUDA' to dilate a segmented image,
+                  - 'removeUnwantedNoiseHeightCUDA' to remove noise in the vertical direction,
+                  - 'removeUnwantedNoiseWidthCUDA' to remove noise in the horizontal direction,
+                  - also included sequential algorithms.
+
+preProcessing.cu - modified 'calculateI1AndI2' to add loop unrolling - to unroll the last warp.
+                 - added 'calculateI1AndI2Stage2' to reduce the total number of array values that need to be parsed from stage 1.
+                 - added 'calculateI1AndI2Final' - called using 1 block and 1 thread - to find the largest and smallest values and then calculate the gradient and intercept.
+                   - These extra methods have been created intentionally in order to find the largest and smallest values in the array without the need to copy the intermediate results to the host.
+                 - modified 'enhanceContrastCUDA' to store the gradient and intercept in registers - speed up access (stored in registers) as these variable are called more than once.
+                   - added some debug statements
+                 - added a low pass filter method called 'lowPassFilterCUDA' - each thread is responsible for 1 pixel output value - writes result to separate array
+                   - NOTE: removed a major bug in the original low pass filter sequential algorithm - problem: function changed the output pixel value of the same buffer (current image being read) instead of writing to a new image.
+                 - added 'calculateThresholdCUDA', 'calculateThresholdCUDAStage2' and 'calculateThresholdCUDAFinal' to calculate the new threshold value on the device - used to compare against original sequential implementation
+                 - added 'iterativeCalculateThresholdCUDA' to utilise device to find the correct threshold
+                 - added 'iterativeCalculateThresholdUsingArray' to carry out automatic thresholding - compare against 'iterativeCalculateThresholdCUDA'
+                 - added 'segmentImageCUDA' to segment the input image using the device
+
+main.cu - added some #define to try and refactor the code to make it more readable and generic
+        - added a lot of debug code
+        - created histograms for the initial image, the contrast enhanced and filtered version
+        - modified the enhance contrast section to improve performance
+          - device now calculates the gradient and intercept rather than the host - no copy to the host required
+          - free all unused device memory
+        - modified the filtering section to take advantage of the CUDA implementation
+        - modified image segmentation to test CUDA algorithm - needs further testing
+        - added code to utilise the dilation algorithms
+        - added code to utilise the erosion algorithms
+        - added code to remove image noise using CUDA

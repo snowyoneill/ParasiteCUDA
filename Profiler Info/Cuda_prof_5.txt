@@ -1,0 +1,7 @@
+#RUN 5
+cta_launched
+#Compute Cap - 2.0
+#tlb_hit
+#tlb_miss
+
+
